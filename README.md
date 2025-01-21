@@ -42,7 +42,10 @@ text_editor/
         python main.py --save <путь_к_файлу>
         python main.py --search <поисковый_термин>
         python main.py --replace <старый_текст:новый_текст>
-        python main.py --highlight
+        python main.py --highlight <текстовый файл>
+        python main.py --delete <файл для удаления>
+                
+
 ## Запуск тестов
 Используем команду чтобы запустить все 3 теста:
 
