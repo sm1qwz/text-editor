@@ -1,21 +1,27 @@
 MIT License
 
-Copyright (c) 2025 Kirkitskiy_Nikita
+Copyright (c) 2025 text-editor
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Данное программное обеспечение предоставляется "как есть", без каких-либо явных или подразумеваемых гарантий, включая, но не ограничиваясь, гарантиями товарной пригодности и пригодности для конкретной цели. В любом случае, автор или правообладатель не несет ответственности за любые претензии, ущерб или другие обязательства, будь то в контракте, деликте или ином правовом процессе, возникающие из, вследствие или в связи с использованием данного программного обеспечения.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Разрешается любому лицу, получившему копию этого программного обеспечения, использовать его в любых целях, включая, но не ограничиваясь, правом использования, копирования, модификации, слияния, публикации, распространения, сублицензирования и/или продажи копий программного обеспечения, при условии, что вышеуказанное уведомление о авторских правах и данное разрешение будут включены во все копии или существенные части программного обеспечения.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+---
+
+### **Объяснение:**
+
+1. **main.py** — основной скрипт для запуска функционала редактора через командную строку. Пользователь может указать, что он хочет делать (открыть файл, сохранить, выполнить поиск/замену текста, подсветить синтаксис).
+
+2. **editor/file_operations.py** — функции для открытия и сохранения файлов.
+
+3. **editor/search_replace.py** — функции для поиска текста и замены его в открытом документе.
+
+4. **editor/syntax_highlighting.py** — подсветка синтаксиса для простых языков программирования с использованием регулярных выражений.
+
+5. **tests** — тесты для каждого модуля, проверяющие правильность работы с файлами, поиска/замены и подсветки синтаксиса.
+
+6. **requirements.txt** — зависимости (используется `pytest` для тестирования).
+
+7. **README.md** — подробное описание проекта и инструкции по установке и запуску.
+
+---
