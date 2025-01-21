@@ -1,10 +1,19 @@
 """
 Модуль для подсветки синтаксиса простых языков программирования.
 """
+
 import re
 
 def highlight_syntax(content):
-    """Подсветка синтаксиса для простых языков (например, Python)."""
+    """
+    Подсвечивает синтаксис простых языков программирования (например, Python).
+
+    :param content: Текстовый код для подсветки.
+    :type content: str
+    :return: Текст с подсветкой синтаксиса.
+    :rtype: str
+    :raises: Нет.
+    """
     keywords = r'\b(def|class|import|if|else|for|while|return)\b'
     functions = r'\b\w+\(.*\)\b'
     strings = r'"[^"]*"'

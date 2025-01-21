@@ -8,24 +8,42 @@ from editor.syntax_highlighting import highlight_syntax
 def validate_replace(value):
     """
     Проверяет, что аргумент --replace имеет правильный формат old:new.
+
+    :param value: Значение аргумента --replace
+    :return: Возвращает значение аргумента, если формат правильный, или выводит предупреждение.
+
+    :raises: Нет
     """
     if ":" not in value:
         print("Предупреждение: Аргумент --replace не содержит ':'. Используйте формат 'old:new'.")
         return value
     return value
 
+
 def count_statistics(content):
     """
-    Подсчитывает количество строк, слов и символов в содержимом.
+    Подсчитывает количество строк, слов и символов в содержимом текста.
+
+    :param content: Содержимое текста
+    :type content: str
+    :return: Кортеж с количеством строк, слов и символов
+    :rtype: tuple
     """
     lines = content.splitlines()
     words = content.split()
     characters = len(content)
     return len(lines), len(words), characters
 
+
 def delete_file(filename):
     """
     Удаляет файл из директории.
+
+    :param filename: Имя файла для удаления
+    :type filename: str
+    :return: Нет
+    :raises FileNotFoundError: Если файл не найден
+    :raises Exception: Если возникла другая ошибка при удалении
     """
     try:
         os.remove(filename)
@@ -35,7 +53,15 @@ def delete_file(filename):
     except Exception as e:
         print(f"Ошибка при удалении файла: {e}")
 
+
 def main():
+    """
+    Главная функция программы. Обрабатывает командную строку, выполняет операции с файлами,
+    такими как открытие, сохранение, поиск, замена текста, подсветка синтаксиса и удаление файлов.
+
+    :return: Нет
+    :raises: Нет
+    """
     parser = argparse.ArgumentParser(description="Текстовый редактор.")
     parser.add_argument("--open", type=str, help="Открыть файл.")
     parser.add_argument("--save", type=str, help="Сохранить файл.")
@@ -107,6 +133,6 @@ def main():
     if args.delete:
         delete_file(args.delete)
 
+
 if __name__ == "__main__":
     main()
-
